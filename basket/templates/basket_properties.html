@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Выберите дату, город и направление аренды</title>
+    <link href="../static/main.css" type="text/css" rel="stylesheet">
+
+        <script type="text/javascript">
+<!--
+
+function validate_form ( ){
+  valid = true;
+
+        if (document.input.input_date1.value == "" || document.input.input_date2.value == ""){
+                alert ( "Пожалуйста, заполните все поля" );
+                valid = false;
+                return valid;
+        }
+
+        if (Number(document.input.input_date.value) > 12 || Number(document.input.input_date.value) < 1){
+                alert ( "Пожалуйста, введите корректную дату" );
+                valid = false;
+                return valid;
+        }
+
+}
+
+//-->
+</script>
+
+
+</head>
+<body>
+    <div class="layout">
+        <header class="header" id="header">
+            <div class="header_inner">
+			<div class="header_logo">BillBo</div>
+                <nav class="nav" id="nav">
+                    <a class="nav_link" href={{url_for('blueprint_auth.start_auth')}}>Выход</a>
+                    <a class="nav_link" href={{url_for('menu_choice')}}>Главное меню</a>
+                    <a class="nav_link" href="#">Каталог</a>
+                    <a class="nav_link" href="#">Мой профиль</a>
+                </nav>
+            </div>
+        </header>
+      <h1 align="center"> Введите фильтр для поиска нужного билборда</h1>
+        <div class="wrapper"></div>
+            <div align = center>
+                <form action="", name="input" method ="POST" onsubmit="return validate_form ( );">
+                    <div class="items_properties_basket">
+                        <h5>Введите дату начала аренды</h5>
+                        <input type="month" name="input_date1" class="form_input_properties" placeholder="Введите дату начала аренды">
+                     </div>
+                    <div class="items_properties_basket">
+                        <h5>Введите дату конца аренды</h5>
+                        <input type="month" name="input_date2" class="form_input_properties" placeholder="Введите дату конца аренды">
+                    </div>
+                    <div class="items_properties_basket">
+                        <input type="text" name="input_city" class="form_input_properties" placeholder="Введите город">
+                        <input type="text" name="input_direction" class="form_input_properties" placeholder="Введите направление">
+                    </div>
+                    <br>
+                    <input type="submit"  class="form_submit" value="Найти">
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

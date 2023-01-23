@@ -1,0 +1,2 @@
+insert into billboard (id_billboard, cost, billb_size, installation_date, city, direction, address, quality_indicator, id_owner)
+values(NULL, '$cost', '$billb_size', '$installation_date', '$city', '$direction', '$address', '$quality_indicator', '$id_owner');

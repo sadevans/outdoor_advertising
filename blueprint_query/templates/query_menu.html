@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Меню запросов</title>
+     <link href="../static/main.css" type="text/css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="layout">
+        <header class="header" id="header">
+            <div class="header_inner">
+			<div class="header_logo">BillBo</div>
+                <nav class="nav" id="nav">
+                    <a class="nav_link" href={{url_for('blueprint_auth.start_auth')}}>Выход</a>
+                    <a class="nav_link" href={{url_for('menu_choice')}}>Главное меню</a>
+                    <a class="nav_link" href={{url_for('bp_report.start_report')}}>Меню отчетов</a>
+                    <a class="nav_link" href="#">Мой профиль</a>
+                </nav>
+            </div>
+        </header>
+        <div class="wrapper_query">
+            <div class="menu_query">
+                <h1 class="menu_query_title">Выберите интересующий вас запрос</h1>
+                <div class="menu_query_items">
+                    <a href={{url_for('bp_query.info_renters')}} class="menu_query_item">Показать все сведения об
+                        арендаторах, заключивших договора в M-месяце YYYY-го года</a>
+                    <br/>
+                    <a href={{url_for('bp_query.sum_order_renter')}} class="menu_query_item">Показать, на какую
+                        сумму оформил заказов каждый арендатор в YYYY-м году</a>
+                    <br/>
+                    <a href={{url_for('bp_query.num_billb')}} class="menu_query_item">Показать номера билбордов,
+                        которые арендатор по фамилии X арендовал в M месяце YYYY-го года</a>
+                    <br/>
+                    <a href={{url_for('menu_choice')}} class="menu_query_item">Выход</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

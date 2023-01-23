@@ -1,0 +1,15 @@
+
+{% extends 'base.html' %}
+
+{% block internal_user %}
+    <a href={{url_for('bp_query.choose_queries')}} class="menu_item">Начать работу с запросами</a>
+    <br/>
+    <a href={{url_for('bp_report.start_report')}} class="menu_item">Начать работу с отчетами</a>
+    <br/>
+    <a href={{url_for('bp_schedule.view_schedule')}} class="menu_item">Просмотреть расписание</a>
+    <br/>
+    <a href={{url_for('bp_insert.get_data')}} class="menu_item">Добавить новые билборды</a>
+    <br/>
+    <a href={{url_for('blueprint_auth.start_auth')}} class="menu_item">Нажмите для выхода из системы</a>
+
+{% endblock %}

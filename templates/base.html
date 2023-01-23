@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Base menu</title>
+    <link href="../static/main.css" type="text/css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="layout">
+        <header class="header" id="header">
+            <div class="header_inner">
+			<div class="header_logo" data-scroll="#intro">BillBo</div>
+                <nav class="nav" id="nav">
+                    <a class="nav_link" href={{url_for('blueprint_auth.start_auth')}} data-scroll="#about">Выйти</a>
+                    <a class="nav_link" href="#" data-scroll="#about">Мой профиль</a>
+                </nav>
+            </div>
+        </header>
+        <div class="menu">
+            <h1 class="menu_title">Вам доступны следующие действия</h1>
+            <div class="menu_items">
+                {% block internal_user %}{% endblock %}
+                {% block external_user %}{% endblock %}
+            </div>
+        </div>
+    </div>
+</body>
+</html>

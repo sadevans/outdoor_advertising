@@ -1,0 +1,7 @@
+{
+    "host": "127.0.0.1",
+    "port": 3306,
+    "user": "sasha",
+    "password": "Sg31052002",
+    "db": "outdoor_advertising"
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Результат создания отчета</title>
+    <link href="../static/main.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+    <div class="layout">
+        <header class="header" id="header">
+            <div class="header_inner">
+			<div class="header_logo">BillBo</div>
+                <nav class="nav" id="nav">
+                    <a class="nav_link" href={{url_for('blueprint_auth.start_auth')}}>Выход</a>
+                    <a class="nav_link" href={{url_for('bp_report.start_report')}}>Назад в меню отчетов</a>
+                    <a class="nav_link" href={{url_for('bp_query.choose_queries')}}>Меню запросов</a>
+                    <a class="nav_link" href={{url_for('menu_choice')}}>Главное меню</a>
+                    <a class="nav_link" href="#">Мой профиль</a>
+                </nav>
+            </div>
+        </header>
+
+        <h1 align="center">Отчет за {{rep_year}} год</h1>
+        <div align="center">
+            <br><br>
+            <table align="center" class="result_table">
+              <tr>
+                  {% for column in schema %}
+                    <td align="center">{{column}}</td>
+                  {% endfor %}
+              </tr>
+                {% for line in result %}
+                  <tr>
+                   {% for column in line %}
+                    <td align = 'center'> {{column}} </td>
+                   {% endfor %}
+                 </tr>
+                {% endfor %}
+            </table>
+        </div>
+        </div>
+
+</body>
+</html>

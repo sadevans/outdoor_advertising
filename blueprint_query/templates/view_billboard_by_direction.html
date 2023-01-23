@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Запрос</title>
+    <link href="../static/main.css" type="text/css" rel="stylesheet">
+
+    <script type="text/javascript">
+<!--
+
+function validate_form ( ){
+  valid = true;
+
+        if ( document.input.input_direction.value == "" ){
+                alert ( "Пожалуйста, заполните поле 'Год'." );
+                valid = false;
+                return valid;
+        }
+
+       if (document.input.input_direction.value != "Запад" || document.input.input_direction.value != "Восток" || document.input.input_direction.value != "Север" || document.input.input_direction.value != "Юг" ||){
+            alert ( "Пожалуйста, введите корректное направление." );
+            valid = false;
+            return valid;
+        }
+
+}
+
+//-->
+</script>
+
+</head>
+
+<body>
+    <div class="layout">
+        <header class="header" id="header">
+            <div class="header_inner">
+			<div class="header_logo">BillBo</div>
+                <nav class="nav" id="nav">
+                    <a class="nav_link" href={{url_for('menu_choice')}}>Назад в главное меню</a>
+                    <a class="nav_link" href="#">Мой профиль</a>
+                </nav>
+            </div>
+        </header>
+        <div class="wrapper_query">
+            <h1 class="main_title">Выберите направление, по которому установлен билборд</h1>
+            <form action="", name="input" method ="POST" onsubmit="return validate_form ( );">
+                 <div class="items_query">
+                    <input type="text" name="input_direction" class="form_query_input" placeholder="Введите направление">
+                    <input type="submit"  class="form_submit" value="Найти">
+                 </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

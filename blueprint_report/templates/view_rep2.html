@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Отчет 1</title>
+    <link href="../static/main.css" type="text/css" rel="stylesheet">
+
+    <script type="text/javascript">
+<!--
+
+function validate_form ( ){
+  valid = true;
+
+        if ( document.input_year.input_year.value == "" ){
+                alert ( "Пожалуйста, заполните поле 'Год'." );
+                valid = false;
+                return valid;
+        }
+
+       if (Number(document.input_year.input_year.value) <= 0 || document.input_year.input_year.value.length != 4){
+                alert ( "Пожалуйста, введите корректное значение года" );
+                valid = false;
+                return valid;
+        }
+
+        if (isNaN(document.input_year.input_year.value)){
+            alert ( "Пожалуйста, введите корректное значение года" );
+            valid = false;
+            return valid;
+        }
+}
+
+//-->
+</script>
+
+</head>
+<body>
+    <div class="layout">
+        <header class="header" id="header">
+            <div class="header_inner">
+			<div class="header_logo">BillBo</div>
+                <nav class="nav" id="nav">
+                    <a class="nav_link" href={{url_for('blueprint_auth.start_auth')}}>Выход</a>
+                    <a class="nav_link" href={{url_for('bp_report.start_report')}}>Назад в меню отчетов</a>
+                    <a class="nav_link" href={{url_for('bp_query.choose_queries')}}>Меню запросов</a>
+                    <a class="nav_link" href={{url_for('menu_choice')}}>Главное меню</a>
+                    <a class="nav_link" href="#">Мой профиль</a>
+                </nav>
+            </div>
+        </header>
+        <form action="", name="input_year" method ="POST" onsubmit="return validate_form ( );">
+            <div id="wrapper">
+                <h1 align="center">Просмотреть отчет о суммарной стоимости всех заказов за год</h1>
+                    <div align="center" class="wrapper_report_form">
+                        <input type="int" class="form_input_report" name ="input_year" placeholder="Введите год">
+                        <input type="submit" class="form_submit_report" value="Просмотреть">
+                    </div>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

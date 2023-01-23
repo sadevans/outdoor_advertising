@@ -1,0 +1,1 @@
+select max(id_ordering) as max_id from ordering where id_rent = '$user_id'

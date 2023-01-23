@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Message</title>
+    <link href="../static/main.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+    <div class="layout">
+        <header class="header" id="header">
+            <div class="header_inner">
+			<div class="header_logo">BillBo</div>
+                <nav class="nav" id="nav">
+                    <a class="nav_link" href={{url_for('bp_order.order_index')}}>Назад к оформлению заказа</a>
+                </nav>
+            </div>
+        </header>
+          <div class="wrapper_query"></div>
+                  <br><br><br>
+                  <h4 align="center">{{ message }}</h4><br><br>
+<!--                  <br><br>-->
+<!--                  <a href={{url_for('bp_order.order_index')}} class="link2">Назад к оформлению заказа</a>-->
+          </div>
+      </div>
+  </body>
+</html>

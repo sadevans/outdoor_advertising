@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Message</title>
+    <link href="../static/main.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+    <div class="layout">
+        <header class="header" id="header">
+            <div class="header_inner">
+			<div class="header_logo">BillBo</div>
+                <nav class="nav" id="nav">
+                    <a class="nav_link" href={{url_for('bp_report.start_report')}}>Назад в меню отчетов</a>
+                </nav>
+            </div>
+        </header>
+          <div class="wrapper_query"></div>
+                  <br><br><br>
+                  <h4 align="center">{{ message }}</h4><br><br>
+                  <br><br>
+                  <a href={{url_for('bp_report.start_report')}} class="link2"> Вернуться в главное меню</a>
+          </div>
+      </div>
+  </body>
+</html>

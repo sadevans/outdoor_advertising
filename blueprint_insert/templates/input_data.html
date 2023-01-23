@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Выберите дату, город и направление аренды</title>
+    <link href="../static/main.css" type="text/css" rel="stylesheet">
+
+        <script type="text/javascript">
+<!--
+
+function validate_form (){
+    valid = true;
+        if (document.input.input_city.value == "" ||
+        document.input.input_direction.value == "" ||
+        document.input.input_cost.value == "" ||
+        document.input.input_size.value == "" ||
+        document.input.input_quality.value == "" ||
+        document.input.input_owner.value == "" ||
+        document.input.input_street.value == "" ||
+        document.input.input_date.value == "" ){
+        alert("Заполните все поля");
+        valid = false;
+        return valid;
+    }
+
+    return valid;
+}
+
+//-->
+</script>
+
+
+</head>
+<body>
+    <div class="layout">
+        <header class="header" id="header">
+            <div class="header_inner">
+			<div class="header_logo">BillBo</div>
+                <nav class="nav" id="nav">
+                    <a class="nav_link" href={{url_for('blueprint_auth.start_auth')}}>Выход</a>
+                    <a class="nav_link" href={{url_for('menu_choice')}}>Главное меню</a>
+                    <a class="nav_link" href="#">Мой профиль</a>
+                </nav>
+            </div>
+        </header>
+      <h1 align="center"> Введите данные нового билборда</h1>
+        <div class="wrapper"></div>
+            <div align = center>
+                <form action="" name="input" method ="POST" onsubmit="return validate_form();">
+                    <div class="items_properties_basket">
+                        <input type="text" name="input_city" class="form_input_properties" placeholder="Введите город установки билборда">
+                        <input type="text" name="input_direction" class="form_input_properties" placeholder="Введите направление установки билборда">
+                     </div>
+                    <div class="items_properties_basket">
+                        <input type="text" name="input_cost" class="form_input_properties" placeholder="Введите цену аренды руб/мес" onKeyPress ="if ((event.keyCode < 48) || (event.keyCode > 57)) event.returnValue = false;">
+                        <input type="text" name="input_size" class="form_input_properties" placeholder="Введите размер билборда в м^2" onKeyPress ="if ((event.keyCode < 48) || (event.keyCode > 57)) event.returnValue = false;">
+                    </div>
+                    <div class="items_properties_basket">
+                        <input type="text" name="input_quality" class="form_input_properties" placeholder="Введите индекс качества билборда" onKeyPress ="if ((event.keyCode < 48) || (event.keyCode > 57)) event.returnValue = false;">
+                        <input type="text" name="input_owner" class="form_input_properties" placeholder="Введите айди владельца" onKeyPress ="if ((event.keyCode < 48) || (event.keyCode > 57)) event.returnValue = false;">
+                    </div>
+                    <div class="items_properties_basket">
+                        <input type="text" name="input_street" class="form_input_properties" placeholder="Введите улицу установки билборда">
+                        <input type="date" name="input_date" class="form_input_properties" placeholder="Введите дату установки билборда">
+                    </div>
+                    <br>
+                    <input type="submit"  class="form_submit" value="Добавить">
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

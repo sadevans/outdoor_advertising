@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="../static/main.css" type="text/css" rel="stylesheet">
+
+</head>
+<body>
+    <div class="layout">
+        <header class="header" id="header">
+            <div class="header_inner">
+			<div class="header_logo">BillBo</div>
+                <nav class="nav" id="nav">
+                    <a class="nav_link" href={{url_for('blueprint_auth.start_auth')}}>Выход</a>
+                    <a class="nav_link" href={{url_for('menu_choice')}}>Главное меню</a>
+                    <a class="nav_link" href={{url_for('bp_query.choose_queries')}}>Меню запросов</a>
+                    <a class="nav_link" href="#">Мой профиль</a>
+                </nav>
+            </div>
+        </header>
+        <h1 align="center">Меню отчетов</h1>
+            <div align="center">
+                    {% for report in report_list %}
+                        <form action='' method = 'POST'>
+                            <label for="create_rep" class="named_list">{{report['rep_name']}}</label>
+                            <div class="buttons_in_named_list">
+                                <input type="submit" name="create_rep" class="form_submit" id="create_rep" value="Создать">
+                                <input type="submit" name="view_rep" class="form_submit" id="view_rep" value="Просмотреть">
+                            </div>
+                            <input type="hidden" name="rep_id" value="{{report['rep_id']}}">
+                        </form>
+                    {% endfor %}
+            </div>
+        </div>
+</body>
+</html>
+
+<!--Лэйбл нужен только для первой кнопки. Позволяет пристроить поясняющий тест перед кнопкой ввода-->
+<!--Айди - это параметр который связывает поле ввода с тэгом лэйбл.-->

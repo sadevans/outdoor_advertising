@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Запрос</title>
+    <link href="../static/main.css" type="text/css" rel="stylesheet">
+
+        <script type="text/javascript">
+<!--
+
+function validate_form ( ){
+  valid = true;
+
+        if (document.input.input_surname.value == "" || document.input.input_date.value == "" ){
+                alert ( "Пожалуйста, заполните все поля" );
+                valid = false;
+        }
+
+        return valid;
+}
+
+//-->
+</script>
+
+</head>
+
+<body>
+    <div class="layout">
+        <header class="header" id="header">
+            <div class="header_inner">
+			<div class="header_logo">BillBo</div>
+                <nav class="nav" id="nav">
+                    <a class="nav_link" href={{url_for('blueprint_auth.start_auth')}}>Выход</a>
+                    <a class="nav_link" href={{url_for('bp_query.choose_queries')}}>Назад в меню запросов</a>
+                    <a class="nav_link" href={{url_for('bp_report.start_report')}}>Меню отчетов</a>
+                    <a class="nav_link" href={{url_for('menu_choice')}}>Главное меню</a>
+                    <a class="nav_link" href="#">Мой профиль</a>
+                </nav>
+            </div>
+        </header>
+        <div class="wrapper_query">
+            <h1>Выберите фамилию арендатора, месяц и год аренды билборда</h1>
+            <form action="", name="input" method ="POST" onsubmit="return validate_form ( );">
+                 <div class="items_query">
+                     <input type="text" name="input_surname" class="form_query_input" placeholder="Введите фамилию">
+                    <input type="month" name="input_date" class="form_query_input" placeholder="Введите месяц и год">
+                    <input type="submit"  class="form_submit" value="Найти">
+                 </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

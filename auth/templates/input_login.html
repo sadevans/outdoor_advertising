@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Authentication</title>
+    <link href="../static/main.css" type="text/css" rel="stylesheet">
+
+        <script type="text/javascript">
+<!--
+
+function validate_form ( ){
+  valid = true;
+
+        if (( document.login_form.login.value == "" )&&( document.login_form.password.value == "" )){
+                alert ( "Пожалуйста заполните все поля." );
+                valid = false;
+        }
+
+        else{
+            if ( document.login_form.login.value == "" ){
+                    alert ( "Пожалуйста заполните поле 'Логин'." );
+                    valid = false;
+            }
+
+            if ( document.login_form.password.value == "" ){
+                    alert ( "Пожалуйста заполните поле 'Пароль'." );
+                    valid = false;
+            }
+        }
+
+        return valid;
+}
+
+//-->
+</script>
+
+</head>
+
+
+<body>
+    <div class="layout_auth">
+        <h1>Введите логин и пароль</h1>
+            <div id="wrapper_auth">
+                <center>
+                    <br><br>
+                    <form action="", name="login_form" method="POST" id="signin" autocomplete="off" onsubmit="return validate_form ( );">
+                        <input type="text" id="login" name="login" placeholder="Логин" />
+                        <input type="password" id="password" name="password" placeholder="Пароль" />
+                        <button type="submit">&#xf0da;</button>
+            <!--            <p>Забыли пароль? <a href="{{ url_for('blueprint_auth.start_auth') }}">Нажмите здесь</a></p>-->
+                    </form>
+                <center>
+            </div>
+    </div>
+</body>
+</html>

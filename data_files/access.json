@@ -1,0 +1,22 @@
+{
+  "director": [
+    "bp_report.start_report",
+    "bp_report.view_rep1",
+    "bp_report.view_rep2",
+    "bp_insert"
+  ],
+  "analyst": [
+    "bp_query",
+    "bp_schedule",
+    "bp_report.create_rep1",
+    "bp_report.start_report",
+    "bp_report.view_rep1",
+    "bp_report.create_rep2",
+    "bp_report.view_rep2"
+  ],
+  "external": [
+    "bp_order",
+    "bp_query.view_billboard_by_quality",
+    "bp_query.view_billboard_by_direction"
+  ]
+}
